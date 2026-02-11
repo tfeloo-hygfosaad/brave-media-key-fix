@@ -1,0 +1,10 @@
+# File: ~/.config/systemd/user/media-broadcast.service
+[Unit]
+Description=Broadcast media keys to multiple MPRIS players
+
+[Service]
+ExecStart=%h/.local/bin/media-broadcast.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
