@@ -29,7 +29,7 @@ No compositor hacks, no key interception, no browser flags.
 
 ## Files
 
-- `media-broadcast.sh`  
+- `media-broadcast`  
   Media event listener and broadcaster.
 
 - `media-broadcast.service`  
@@ -47,11 +47,11 @@ No compositor hacks, no key interception, no browser flags.
 
 1. Install the script:
    ```bash
-   install -Dm755 media-broadcast.sh ~/.local/bin/media-broadcast.sh
+   install -Dm755 ./bin/media-broadcast ~/.local/bin/media-broadcast
 
 2. Install the service:
    ```bash
-   install -Dm644 media-broadcast.service ~/.config/systemd/user/media-broadcast.service
+   install -Dm644 ./bin/media-broadcast.service ~/.config/systemd/user/media-broadcast.service
 
 3. Enable and start:
    ```bash
@@ -60,7 +60,7 @@ No compositor hacks, no key interception, no browser flags.
 
 ## Configuration
 
-Edit `media-broadcast.sh`:
+Edit `media-broadcast`:
 
 ```bash
 MAIN_PLAYERS=("haruna" "strawberry")
