@@ -51,7 +51,7 @@ No compositor hacks, no key interception, no browser flags.
 
 2. Install the service:
    ```bash
-   install -Dm644 ./bin/media-broadcast.service ~/.config/systemd/user/media-broadcast.service
+   install -Dm644 ./systemd/media-broadcast.service ~/.config/systemd/user/media-broadcast.service
 
 3. Enable and start:
    ```bash
