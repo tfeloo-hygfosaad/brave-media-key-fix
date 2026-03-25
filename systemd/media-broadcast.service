@@ -3,7 +3,7 @@
 Description=Broadcast media keys to multiple MPRIS players
 
 [Service]
-ExecStart=%h/.local/bin/media-broadcast.sh
+ExecStart=%h/.local/bin/media-broadcast
 Restart=always
 
 [Install]
