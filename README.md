@@ -45,18 +45,29 @@ No compositor hacks, no key interception, no browser flags.
 
 ## Installation
 
-1. Install the script:
-   ```bash
-   install -Dm755 ./bin/media-broadcast ~/.local/bin/media-broadcast
+Install and enable the service:
+```bash
+make install
+```
 
-2. Install the service:
-   ```bash
-   install -Dm644 ./systemd/media-broadcast.service ~/.config/systemd/user/media-broadcast.service
+Remove everything cleanly:
 
-3. Enable and start:
-   ```bash
-   systemctl --user daemon-reload
-   systemctl --user enable --now media-broadcast.service
+```bash
+make uninstall
+```
+
+### What make install does
+
+1. Installs the script to ~/.local/bin/media-broadcast.
+2. Installs the systemd user service to ~/.config/systemd/user/.
+3. Reloads the systemd user daemon.
+4. Enables the service (starts now and on login).
+
+### Verify it’s running
+
+```bash
+systemctl --user status media-broadcast.service
+```
 
 ## Configuration
 
